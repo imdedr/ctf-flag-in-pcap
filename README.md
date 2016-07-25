@@ -4,13 +4,21 @@
 ## Readme
 這個工具主要是因為我在打 CTF 的 A&D, 挨打的時候用來快速定位攻擊封包用的
 
+## Install
+這個工具使用 pyshark 來讀取 pcap, 因此必須先安裝 pyshark
+
+```pip install pyshark```
 
 ## Usage
 python find.py "attack.pcap" "flag 的 格式(re)"
 
 ## Example
 專案內有一個 xctf_2016_19.pcap 是我們在打 XCTF 2016 Final 時的被攻擊封包
-比賽的 Flag 格式為 "[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+"
+
+比賽的 Flag 格式如下
+
+"[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+"
 
 使用以下指令執行範例
-python find.py "xctf_2016_19.pcap" "[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+"
+
+```python find.py "xctf_2016_19.pcap" "[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+-[0-9A-Za-z]+"```
